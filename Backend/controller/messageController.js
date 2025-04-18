@@ -36,6 +36,6 @@ export const deleteMessage = catchAsyncErrors(async (req, res, next) => {
   await message.deleteOne();
   res.status(200).json({
     success: true,
-    message: "Message Delted",
+    message: "Message Deleted",
   });
 });
