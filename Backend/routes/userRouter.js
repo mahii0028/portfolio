@@ -7,7 +7,8 @@ import {
   updateProfile,
   updatePassword,
   getUserForPortfolio,
-  forgotPassword
+  forgotPassword,
+  resetPassword,
 } from "../controller/userController.js";
 import { isAuthenticated } from "../middlewares/isAuth.js";
 
@@ -21,4 +22,5 @@ router.put("/update/me", isAuthenticated, updateProfile);
 router.put("/update/password", isAuthenticated, updatePassword);
 router.get("/me/portfolio", getUserForPortfolio);
 router.post("/password/forgot", forgotPassword);
+router.post("/password/reset", resetPassword);
 export default router;
